@@ -168,7 +168,7 @@ module SmsTools
         if converted = UTF8_TO_GSM[char]
           gsm_encoded_string << converted
         else
-          raise "Unsupported symbol in GSM-7 encoding: 0x#{char.to_s(16).upcase}"
+          next
         end
       end
 
